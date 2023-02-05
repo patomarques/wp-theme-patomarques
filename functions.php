@@ -542,3 +542,66 @@ function wp_patomarques_child_scripts_loader() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_patomarques_child_scripts_loader' );
+
+function create_custom_post_type() {
+  $args = array(
+    'labels' => [],
+    'menu_icon' => '',
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title', 'editor', 'author', 'excerpt', 'page-attributes')
+  );
+
+  $args['labels'] = array(
+      'name' => __('Habilidades'),
+      'singular_name' => __('Habilidade')
+  );
+
+  $args['menu_icon'] = 'dashicons-format-gallery';
+
+  register_post_type(
+      'habilidades',
+      $args
+  );
+
+  register_post_type(
+      'experiencia',
+      array(
+          'labels' => array(
+              'name' => __('Experiências'),
+              'singular_name' => __('Experiência')
+          ),
+          'public' => true,
+          'has_archive' => true,
+          //'show_in_rest' => true,
+          'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+          //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
+          //'menu_position'       => 1,
+          'exclude_from_search' => true
+      )
+  );
+
+  register_post_type(
+    'contato',
+    array(
+        'labels' => array(
+            'name' => __('Contatos'),
+            'singular_name' => __('Contato')
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+        //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
+        //'menu_position'       => 1,
+        'exclude_from_search' => true
+    )
+);
+}
+
+// Hooking up our function to theme setup
+add_action('init', 'create_custom_post_type', 0);
