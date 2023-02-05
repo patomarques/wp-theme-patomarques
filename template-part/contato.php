@@ -1,7 +1,7 @@
 <?php
   $page = get_page_by_path('contato');
 
-  $args = array( 'post_type' => 'contatos', 'posts_per_page' => -1 );
+  $args = array( 'post_type' => 'contato', 'posts_per_page' => -1 );
   $contatos = new WP_Query( $args );
 ?>
 

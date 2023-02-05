@@ -20,13 +20,11 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <p class="content-text">
         <?php while ( $portfolio->have_posts() ) : $portfolio->the_post();
           echo get_the_title();
           endwhile;
           wp_reset_postdata();
         ?>
-        </p>
       </div>
     </div>
   </div>

@@ -1,6 +1,4 @@
 <?php
-  // $current = get_template_part( 'sobre' );
-  // print_r($current);
   $page = get_page_by_path('estudos');
 ?>
 <section class="container-fluid">
