@@ -1,0 +1,42 @@
+html{
+
+}
+body{
+
+}
+
+html, body {
+
+}
+
+a {
+  color: $black;
+
+  &:hover{
+    opacity: .7;
+    @include fade-transition('hover');
+  }
+}
+
+p{
+
+}
+
+button {
+
+}
+
+.bg-gradient {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+
+  &__red-to-black {
+    background-image: linear-gradient(to top, #1c0f13, #461623, #74162e, #a31232, #d2122e);
+  }
+
+  &__black-to-red {
+    background-image: linear-gradient(to bottom, #1c0f13, #461623, #74162e, #a31232, #d2122e);
+  }
+}
