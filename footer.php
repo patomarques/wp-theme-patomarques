@@ -39,6 +39,11 @@
 			</div>
 		</footer>
 	</div>
+
+  <a href="https://www.flaticon.com/free-icons/duck" title="duck icons" class="hidden">
+    Duck icons created by smalllikeart - Flaticon
+  </a>
+
 	<?php
 		wp_footer();
 	?>

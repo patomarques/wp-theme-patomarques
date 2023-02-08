@@ -12,6 +12,8 @@ $defaults = array(
 $pages = get_pages($defaults);
 ?>
 
+<?php get_template_part( 'template-part/intro-fullscreen' ); ?>
+
 <?php foreach ( $pages as $page ) { ?>
   <?php get_template_part( 'template-part/' . $page->post_name ); ?>
 <?php } ?>

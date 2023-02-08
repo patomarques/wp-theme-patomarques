@@ -2,6 +2,23 @@ $black: '#1C0F13';
 $red: '#D2122E'; //
 $gold: '#FFB30F';
 
+/* Colors */
 .black {
   color: $black;
+}
+
+/* Backgrounds */
+.bg-gradient {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+
+  &__red-to-black {
+    background-image: linear-gradient(to top, #1c0f13, #461623, #74162e, #a31232, #d2122e);
+  }
+
+  &__black-to-red {
+    background-image: linear-gradient(to bottom, #1c0f13, #461623, #74162e, #a31232, #d2122e);
+  }
 }

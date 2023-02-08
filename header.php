@@ -4,14 +4,17 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
 <?php
-	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-light bg-light' ); // Get custom meta-value.
-	$navbar_position = get_theme_mod( 'navbar_position', 'static' ); // Get custom meta-value.
+	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-light bg-light' );
+	$navbar_position = get_theme_mod( 'navbar_position', 'static' );
 
-	$search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
+	$search_enabled  = get_theme_mod( 'search_enabled', '1' );
 ?>
 
 <body <?php body_class(); ?>>
@@ -66,9 +69,9 @@
 					<?php
 						endif;
 					?>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container -->
-		</nav><!-- /#header -->
+				</div>
+			</div>
+		</nav>
 	</header>
 
 	<main id="main" class="container"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
@@ -77,7 +80,7 @@
 			if ( is_single() || is_archive() ) :
 		?>
 			<div class="row">
-				<div class="col-md-8 col-sm-12">
+				<div class="col-12">
 		<?php
 			endif;
 		?>
