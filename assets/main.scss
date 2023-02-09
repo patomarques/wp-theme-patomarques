@@ -1,5 +1,4 @@
 // Compile "main.scss" as "css/main.css"
-@import 'scss/wp-theme.scss';
 /**
  * Import Bootstrap sources
  * https://getbootstrap.com/docs/5.2/customize/sass
@@ -52,7 +51,7 @@ $yellow: #ffc107;
 $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
-
+$white: #FFFFFF;
 // Fonts
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
@@ -73,7 +72,6 @@ $link-decoration: none;
 
 // 6. Optionally include any other parts as needed: Uncomment components to reduce the filesize
 @import "../node_modules/bootstrap/scss/utilities";
-@import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";

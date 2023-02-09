@@ -529,6 +529,7 @@ function wp_patomarques_child_scripts_loader() {
 	// 1. Styles.
 	wp_enqueue_style( 'style', get_theme_file_uri( 'style.css' ), array(), $theme_version, 'all' );
 	wp_enqueue_style( 'main', get_theme_file_uri( 'assets/dist/main.css' ), array(), $theme_version, 'all' ); // main.scss: Compiled Framework source + custom styles.
+	wp_enqueue_style( 'wp-theme', get_theme_file_uri( 'assets/wp-theme.css' ), array(), $theme_version, 'all' ); // main.scss: Compiled Framework source + custom styles.
 
 	if ( is_rtl() ) {
 		wp_enqueue_style( 'rtl', get_theme_file_uri( 'assets/dist/rtl.css' ), array(), $theme_version, 'all' );
@@ -600,7 +601,23 @@ function create_custom_post_type() {
         //'menu_position'       => 1,
         'exclude_from_search' => true
     )
-);
+  );
+
+  register_post_type(
+    'portfolio',
+    array(
+        'labels' => array(
+            'name' => __('Portfolio'),
+            'singular_name' => __('Portfolio')
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+        //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
+        //'menu_position'       => 1,
+        'exclude_from_search' => true
+    )
+  );
 }
 
 // Hooking up our function to theme setup
