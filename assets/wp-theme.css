@@ -288,11 +288,8 @@ a:hover {
 
 .section {
   width: 100vw;
+  margin-bottom: 10rem;
 }
-.title {
-  font-family: "Poppins", sans-serif;
-}
-
 .content-intro {
   width: 100vw;
   height: 100vh;
@@ -321,6 +318,23 @@ a:hover {
 
 .pb-100 {
   padding-bottom: 100px;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+}
+.title:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  margin-top: 8px;
+  background-color: #1C0F13;
 }
 
 .logo-icon {

@@ -5,11 +5,11 @@
   $contatos = new WP_Query( $args );
 ?>
 
-<section class="container-fluid">
+<section class="container-fluid section">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h3 class="title-section">
+        <h3 class="title">
           <?= $page->post_title ?>
         </h3>
       </div>
@@ -18,7 +18,7 @@
       <div class="col-12">
         <?php while ( $contatos->have_posts() ) : $contatos->the_post(); ?>
           <a href="#" alt="<?= get_the_title() ?>" title="<?= get_the_title() ?>" rel="noopener noreferrer">
-            <span class="icon">ICONE</span>
+            <span class="icon"><?= get_the_title() ?></span>
           </a>
         <?php endwhile;
           wp_reset_postdata();

@@ -4,11 +4,11 @@
   $args = array( 'post_type' => 'habilidades', 'posts_per_page' => -1 );
   $skills = new WP_Query( $args );
 ?>
-<section class="container-fluid">
+<section class="container-fluid section">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h3><?= $page->post_title ?></h3>
+        <h3 class="title"><?= $page->post_title ?></h3>
       </div>
     </div>
     <div class="row">

@@ -17,20 +17,12 @@ a {
   }
 }
 
-p {}
-
-button {}
-
 .section {
   width: 100vw;
+  margin-bottom: 10rem;
 
   &__content {}
 }
-
-.title {
-  font-family: $font-family-default;
-}
-
 
 .content-intro{
   width: 100vw;
@@ -62,4 +54,22 @@ button {}
 
 .pb-100 {
   padding-bottom: 100px;
+}
+
+.title {
+  font-family: $font-family-default;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    margin-top: 8px;
+    background-color: $color-black;
+  }
 }
