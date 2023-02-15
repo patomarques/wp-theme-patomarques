@@ -5,3 +5,7 @@
   -o-transition: $element 0.15s ease-in-out;
   transition: $element 0.15s ease-in-out;
 }
+
+.trans {
+  @include fade-transition('hover');
+}
