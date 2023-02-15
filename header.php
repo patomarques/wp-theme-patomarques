@@ -41,37 +41,56 @@
 					?>
 				</a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'wp_patomarques_child' ); ?>">
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'wp_patomarques_child' ); ?>">
 					<span class="navbar-toggler-icon"></span>
-				</button>
+				</button> -->
 
 				<div id="navbar" class="collapse navbar-collapse">
 					<?php
-						wp_nav_menu(
-							array(
-								'menu_class'     => 'navbar-nav me-auto',
-								'container'      => '',
-								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-								'walker'         => new WP_Bootstrap_Navwalker(),
-								'theme_location' => 'main-menu',
-							)
-						);
+						// wp_nav_menu(
+						// 	array(
+						// 		'menu_class'     => 'navbar-nav me-auto',
+						// 		'container'      => '',
+						// 		'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+						// 		'walker'         => new WP_Bootstrap_Navwalker(),
+						// 		'theme_location' => 'main-menu',
+						// 	)
+						// );
+					?>
 
-						if ( '1' === $search_enabled ) :
-					?>
-							<form class="search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<div class="input-group">
-									<input type="text" name="s" class="form-control" placeholder="<?php esc_attr_e( 'Search', 'wp_patomarques_child' ); ?>" title="<?php esc_attr_e( 'Search', 'wp_patomarques_child' ); ?>" />
-									<button type="submit" name="submit" class="btn btn-outline-secondary"><?php esc_html_e( 'Search', 'wp_patomarques_child' ); ?></button>
-								</div>
-							</form>
-					<?php
-						endif;
-					?>
+
 				</div>
 			</div>
 		</nav>
 	</header>
+
+  <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
+  <label class="menu-hamburguer" for="main-navigation-toggle">
+    <span></span>
+  </label>
+
+  <nav id="main-navigation" class="nav-main">
+    <ul class="menu">
+      <?php
+        $menu = wp_get_nav_menu_items( 'main_menu',
+          array(
+            'order'                  => 'ASC',
+		        'orderby'                => 'menu_order',
+            'post_type'              => 'nav_menu_item',
+            'post_status'            => 'publish',
+          )
+        );
+
+        foreach($menu as $key => $item) {
+      ?>
+      <li class="menu__item">
+        <a href="<?= $menu[$key]->url ?>" class="menu__link">
+          <?= $menu[$key]->title ?>
+        </a>
+      </li>
+      <?php } ?>
+    </ul>
+  </nav>
 
   <?php
     $navbarMargin = '';

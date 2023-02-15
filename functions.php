@@ -537,6 +537,7 @@ function wp_patomarques_child_scripts_loader() {
 
 	// 2. Scripts.
 	wp_enqueue_script( 'mainjs', get_theme_file_uri( 'assets/dist/main.bundle.js' ), array(), $theme_version, true );
+	wp_enqueue_script( 'wp-theme-js', get_theme_file_uri( 'assets/js/wp-patomarques.js' ), array(), $theme_version, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -622,3 +623,5 @@ function create_custom_post_type() {
 
 // Hooking up our function to theme setup
 add_action('init', 'create_custom_post_type', 0);
+
+add_filter( 'show_admin_bar', '__return_false' );
