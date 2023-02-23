@@ -21,7 +21,11 @@ a {
   width: 100vw;
   margin-bottom: 10rem;
 
-  &__content {}
+  &__content-text,
+  &__content-text p{
+    font-size: 1.2rem;
+    font-family: $font-family-secondary;
+  }
 }
 
 .content-intro{
