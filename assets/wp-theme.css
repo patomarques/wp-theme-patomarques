@@ -280,19 +280,22 @@ body {
 
 a {
   color: #1C0F13;
+  font-weight: bold;
 }
 a:hover {
   opacity: 0.7;
   transition: "hover" 0.15s ease-in-out;
 }
 
+p {
+  font-size: 1.3rem;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
 .section {
   width: 100vw;
   margin-bottom: 10rem;
-}
-.section__content-text, .section__content-text p {
-  font-size: 1.2rem;
-  font-family: "Source Sans Pro", sans-serif;
 }
 
 .content-intro {
@@ -330,7 +333,8 @@ a:hover {
   font-size: 2rem;
   position: relative;
   display: inline-block;
-  margin-bottom: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 .title:after {
   content: "";

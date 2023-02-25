@@ -10,6 +10,7 @@ body {
 
 a {
   color: $color-black;
+  font-weight: bold;
 
   &:hover {
     opacity: .7;
@@ -17,15 +18,15 @@ a {
   }
 }
 
+p {
+  font-size: 1.3rem;
+  font-family: $font-family-secondary;
+  margin-bottom: .5rem;
+}
+
 .section {
   width: 100vw;
   margin-bottom: 10rem;
-
-  &__content-text,
-  &__content-text p{
-    font-size: 1.2rem;
-    font-family: $font-family-secondary;
-  }
 }
 
 .content-intro{
@@ -65,7 +66,8 @@ a {
   font-size: 2rem;
   position: relative;
   display: inline-block;
-  margin-bottom: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 
   &:after {
     content: '';
