@@ -17,7 +17,8 @@
       </div>
       <div class="col-12 col-md-8">
         <div class="section__content-text text-justify">
-          <?= $page->post_content ?>
+          <p><?php echo get_post_meta($page->ID, 'resume', true); ?></p>
+          <?//= $page->post_content ?>
         </div>
       </div>
     </div>

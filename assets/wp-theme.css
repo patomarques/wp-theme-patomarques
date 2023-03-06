@@ -346,6 +346,10 @@ p {
   background-color: #1C0F13;
 }
 
+#main {
+  margin-top: 0 !important;
+}
+
 .logo-icon {
   width: 8vw;
   height: auto;
