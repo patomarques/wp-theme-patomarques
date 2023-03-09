@@ -14,14 +14,24 @@
     <div class="row">
       <div class="col-12">
         <p class="content-text">
+
+
+
           <?= $page->post_content ?>
         </p>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
+
         <?php while ( $skills->have_posts() ) : $skills->the_post();
-          echo get_the_title();
+          echo get_the_title(); ?>
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-custom" role="progressbar" aria-label="Basic example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+
+         <?php
           endwhile;
           wp_reset_postdata();
         ?>

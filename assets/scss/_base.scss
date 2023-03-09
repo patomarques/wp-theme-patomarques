@@ -19,14 +19,23 @@ a {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-family: $font-family-secondary;
   margin-bottom: .5rem;
+  line-height: 2.4rem;
 }
 
 .section {
   width: 100vw;
   margin-bottom: 10rem;
+
+  &__content {
+    &-text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 .content-intro{
@@ -82,4 +91,8 @@ p {
 
 #main {
   margin-top: 0 !important;
+}
+
+.progress-bar-custom {
+  background-color: $color-black !important;
 }

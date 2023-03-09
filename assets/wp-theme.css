@@ -288,14 +288,20 @@ a:hover {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-family: "Source Sans Pro", sans-serif;
   margin-bottom: 0.5rem;
+  line-height: 2.4rem;
 }
 
 .section {
   width: 100vw;
   margin-bottom: 10rem;
+}
+.section__content-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-intro {
@@ -348,6 +354,10 @@ p {
 
 #main {
   margin-top: 0 !important;
+}
+
+.progress-bar-custom {
+  background-color: #1C0F13 !important;
 }
 
 .logo-icon {

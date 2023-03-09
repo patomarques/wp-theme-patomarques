@@ -17,7 +17,9 @@
       </div>
       <div class="col-12 col-md-8">
         <div class="section__content-text text-justify">
-          <p><?php echo get_post_meta($page->ID, 'resume', true); ?></p>
+          <p class="content-intro__text">
+            <?php echo nl2br(get_post_meta($page->ID, 'resume', true)); ?>
+          </p>
           <?//= $page->post_content ?>
         </div>
       </div>
