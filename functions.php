@@ -614,6 +614,7 @@ function create_custom_post_type() {
         'public' => true,
         'has_archive' => true,
         'supports' => array('title', 'author', 'editor', 'thumbnail', 'custom-fields'),
+        'taxonomies'  => array( 'category' ),
         //'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'
         //'menu_position'       => 1,
         'exclude_from_search' => true
