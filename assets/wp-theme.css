@@ -17,7 +17,7 @@
   background-image: linear-gradient(to bottom, #1c0f13, #461623, #74162e, #a31232, #d2122e);
 }
 
-.trans, header {
+.trans, .contact-list__link, header {
   transition: "hover" 0.15s ease-in-out;
 }
 
@@ -364,6 +364,12 @@ p {
   background-color: #1C0F13 !important;
 }
 
+.contact-list__item {
+  margin: 0 15vw;
+}
+.contact-list__link {
+  font-size: 3.2rem;
+}
 .logo-icon {
   width: 8vw;
   height: auto;

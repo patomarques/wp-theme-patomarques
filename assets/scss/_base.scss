@@ -99,3 +99,18 @@ p {
 .progress-bar-custom {
   background-color: $color-black !important;
 }
+
+.contact-list {
+  &__item {
+    margin: 0 15vw;
+  }
+
+  &__link {
+    font-size: 3.2rem;
+    @extend .trans;
+
+    &:hover {
+
+    }
+  }
+}
