@@ -4,7 +4,7 @@
   $args = array( 'post_type' => 'portfolio', 'posts_per_page' => -1 );
   $portfolio = new WP_Query( $args );
 ?>
-<section class="container-fluid section">
+<section class="container-full section">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
@@ -20,16 +20,20 @@
     </div>
     <div class="row">
 
-        <?php while ( $portfolio->have_posts() ) : $portfolio->the_post(); ?>
 
-        <div class="col-12 col-md-4">
-          <?= get_the_title(); ?>
-        </div>
-
-        <?php
-          endwhile;
-          wp_reset_postdata();
-        ?>
     </div>
+  </div>
+  <div class="content-portfolio row">
+    <?php while ( $portfolio->have_posts() ) : $portfolio->the_post(); ?>
+
+      <div class="col-12 col-md-4 p-0">
+        <?= get_the_title() ?>
+        <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?= get_the_title() ?>" title="<?= get_the_title() ?>" class="img-fluid">
+      </div>
+
+    <?php
+      endwhile;
+      wp_reset_postdata();
+    ?>
   </div>
 </section>
