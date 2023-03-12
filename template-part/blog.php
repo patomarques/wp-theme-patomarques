@@ -21,27 +21,25 @@
       ?>
         <div class="col-12 col-md-4">
 
-          <img src="<?= the_post_thumbnail_url() ?>" alt="<?php the_title() ?>"
-            class="img-responsive">
+          <div class="post-thumb">
+            <img src="<?= the_post_thumbnail_url() ?>" alt="<?php the_title() ?>"
+              class="post-thumb__img img-responsive">
+          </div>
+
           <h3 class="post-title"><?php the_title(); ?></h3>
-          <?php //print_r(get_categories());  ?>
 
           <ul class="post-categories-list list-inline">
 
             <?php
-              //$taxonomy = 'category';
-              // ID Gets which assign post
-              //$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
-              //$separator_link = ', ';
-              $categories = wp_get_post_categories( $post->ID );
-              print_r($categories);
+              $post_categories = wp_get_post_categories( $post->ID );
 
-              foreach( $categories as $category ) {
+              foreach($post_categories as $c){
+                $cat = get_category( $c );
             ?>
 
               <li class="post-categories__item list-inline-item">
-                <a href="#" class="post-categories__link">
-                  <?php print_r(get_the_category( $category )); ?>
+                <a href="/<?= $cat->slug ?>" class="post-categories__link">
+                  <?= $cat->name ?>
                 </a>
               </li>
 
@@ -54,7 +52,7 @@
         wp_reset_postdata();
       ?>
     </div>
-    <div class="row">
+    <div class="row mt-5">
       <div class="col-12 text-center">
         <button class="btn btn-secondary btn-read-more">Continue Vendo...</button>
       </div>

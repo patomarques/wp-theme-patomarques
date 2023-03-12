@@ -71,25 +71,6 @@ p {
   padding-bottom: 100px;
 }
 
-.title {
-  font-family: $font-family-default;
-  font-size: 2rem;
-  position: relative;
-  display: inline-block;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-
-  &:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    display: block;
-    position: absolute;
-    margin-top: 8px;
-    background-color: $color-black;
-  }
-}
-
 #main {
   margin-top: 0 !important;
 }
@@ -113,5 +94,45 @@ p {
     &:hover {
       color: $color-gold;
     }
+  }
+}
+
+
+.post-categories {
+  margin-bottom: 20px;
+
+  &__link {
+    background-color: $color-black;
+    color: $color-white;
+    padding: 1px 6px 2px;
+    border-radius: 5px;
+    font-size: .8rem;
+    border: 1px solid transparent;
+
+    &:hover,
+    &:focus {
+      color: $color-gold;
+      border: 1px solid $color-gold;
+    }
+  }
+}
+
+.post-thumb {
+  width: 100%;
+  margin-bottom: 12px;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 65%;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
   }
 }
