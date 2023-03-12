@@ -1,0 +1,13 @@
+.footer-copyfight {
+  font-weight: 300;
+  padding-bottom: 10px;
+
+  .fa-flag {
+    font-size: .8rem;
+    margin: 0 4px;
+  }
+
+  &:hover {
+    font-weight: 700;
+  }
+}

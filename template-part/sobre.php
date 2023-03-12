@@ -4,7 +4,7 @@
 ?>
 <section class="container-fluid section">
   <div class="container">
-    <div class="row">
+    <div class="row hidden">
       <div class="col-12 text-center">
         <h3 class="title"><?= $page->post_title ?></h3>
       </div>

@@ -15,6 +15,7 @@ a {
   &:hover {
     opacity: .7;
     @include fade-transition('hover');
+    color: $color-gold;
   }
 }
 
@@ -102,7 +103,7 @@ p {
 
 .contact-list {
   &__item {
-    margin: 0 15vw;
+    margin: 0 5vw;
   }
 
   &__link {
@@ -110,7 +111,7 @@ p {
     @extend .trans;
 
     &:hover {
-
+      color: $color-gold;
     }
   }
 }

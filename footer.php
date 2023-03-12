@@ -4,7 +4,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<p><?php printf( esc_html__( ' %1$s &copy; %2$s', 'wp_patomarques_child' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>
+						<a href="/" class="footer-copyfight">
+              <?= get_bloginfo( 'name', 'display' ) ?>
+              <i class="fa-solid fa-flag"></i>
+              <?= date_i18n( 'Y' ) ?>
 					</div>
 
 					<?php
